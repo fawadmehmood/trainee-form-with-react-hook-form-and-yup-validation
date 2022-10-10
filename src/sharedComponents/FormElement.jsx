@@ -10,7 +10,7 @@ const FormElement = ({
   inputPlaceholder,
 }) => {
   return (
-    <div className="flex gap-8 items-center">
+    <div className="flexElement">
       <Label labelFor={labelFor} labelText={labelText} />
       <Input
         inputType={inputType}

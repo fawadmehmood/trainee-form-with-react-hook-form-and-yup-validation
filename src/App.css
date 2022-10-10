@@ -20,3 +20,7 @@ body {
 .row {
   @apply flex;
 }
+
+.flexElement {
+  @apply flex gap-8 items-center;
+}
