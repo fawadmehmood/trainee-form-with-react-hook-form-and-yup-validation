@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Label from "../sharedComponents/Label";
 import { cities, techTrack, bootCamp1 } from "../selectUtils1";
-import Select from "../sharedComponents/Select";
-
-const BootCampDetails = () => {
+const BootCamp = () => {
   const [city, setCity] = useState([]);
   const [track, setTrack] = useState([]);
   const [bCamp, setBootcamp] = useState([]);
@@ -73,7 +71,7 @@ const BootCampDetails = () => {
         Boot Camp Priority
       </legend>
 
-      {/* <div className="flexElement">
+      <div className="flexElement">
         <Label labelFor="city1" labelText="Select City:" />
         <select
           name="city1"
@@ -86,19 +84,8 @@ const BootCampDetails = () => {
           </option>
           {citiesOptions}
         </select>
-      </div> */}
-
-      <Select
-        labelFor="city1"
-        labelText="Select City:"
-        name="city1"
-        id="city1"
-        handleTrack={handleTrack}
-        defaultOption="Choose City"
-        options={citiesOptions}
-      />
-
-      {/* <div className="flexElement">
+      </div>
+      <div className="flexElement">
         <Label labelFor="ttrack1" labelText="Select Technology Track:" />
         <select
           name="ttrack1"
@@ -111,19 +98,9 @@ const BootCampDetails = () => {
           </option>
           {trackOptions}
         </select>
-      </div> */}
+      </div>
 
-      <Select
-        labelFor="ttrack1"
-        labelText="Select Technology Track:"
-        name="ttrack1"
-        id="ttrack1"
-        handleTrack={handleBootCamp}
-        defaultOption="Choose a Technology Track"
-        options={trackOptions}
-      />
-
-      {/* <div className="flexElement">
+      <div className="flexElement">
         <Label labelFor="bCamp1" labelText="Select BootCamp:" />
         <select name="bCamp1" id="bCamp1" className="input borders">
           <option id="disabled-value" value={""}>
@@ -131,18 +108,9 @@ const BootCampDetails = () => {
           </option>
           {bootCampOptions}
         </select>
-      </div> */}
-
-      <Select
-        labelFor="bCamp1"
-        labelText="Select BootCamp:"
-        name="bCamp1"
-        id="bCamp1"
-        defaultOption="Choose a BootCamp"
-        options={bootCampOptions}
-      />
+      </div>
     </fieldset>
   );
 };
 
-export default BootCampDetails;
+export default BootCamp;
