@@ -1,40 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Label from "../sharedComponents/Label";
-import { cities, techTrack } from "../selectUtils1";
+import { cities, techTrack, bootCamp1 } from "../selectUtils1";
 
 const BootCampDetails = () => {
+  const [city, setCity] = useState([]);
   const [track, setTrack] = useState([]);
   const [bCamp, setBootcamp] = useState([]);
+  const [cityId, setCityId] = useState(1);
 
-  console.log("rerender");
+  useEffect(() => {
+    setCity(cities);
+  }, []);
 
-  const citiesOptions = cities.map((city) => {
+  const citiesOptions = city.map((ci) => {
     return (
-      <option key={city.id} value={city.id}>
-        {city.cName}
+      <option key={ci.id} value={ci.id}>
+        {ci.cName}
       </option>
     );
   });
 
   const handleTrack = (e) => {
+    setTrack([]);
+
     const id = parseInt(e.target.value);
     const { technologyTrack } = cities.find((city) => city.id === id);
-    console.log(technologyTrack);
 
     const technologyTrackOptions = technologyTrack.map((id) => {
       return techTrack.find((tr) => {
         return tr.id === id;
       });
     });
-    console.log(technologyTrackOptions);
     setTrack(technologyTrackOptions);
+    setCityId(id);
   };
 
-  //   const handleBootCamp = (e) => {
-  //     const id = parseInt(e.target.value);
-  //     const bootCampOptions = bootCamp.filter((tt) => tt.trackId === id);
-  //     setBootcamp(bootCampOptions);
-  //   };
+  const handleBootCamp = (e) => {
+    const id = parseInt(e.target.value);
+    const { bootCmp } = cities.find((city) => {
+      return city.id === cityId;
+    });
+
+    const bootCampOptions = bootCmp[id].map((id) => {
+      return bootCamp1.find((bc) => {
+        return bc.id === id;
+      });
+    });
+
+    setBootcamp(bootCampOptions);
+  };
 
   const trackOptions = track.map((tr) => {
     return (
@@ -44,13 +58,13 @@ const BootCampDetails = () => {
     );
   });
 
-  //   const bootCampOptions = bCamp.map((camp) => {
-  //     return (
-  //       <option key={camp.id} value={camp.id}>
-  //         {camp.name}
-  //       </option>
-  //     );
-  //   });
+  const bootCampOptions = bCamp.map((bCamp) => {
+    return (
+      <option key={bCamp.id} value={bCamp.id}>
+        {bCamp.bName}
+      </option>
+    );
+  });
 
   return (
     <fieldset className="border p-3">
@@ -74,7 +88,12 @@ const BootCampDetails = () => {
       </div>
       <div className="flexElement">
         <Label labelFor="ttrack1" labelText="Select Technology Track:" />
-        <select name="ttrack1" id="ttrack1" className="input borders">
+        <select
+          name="ttrack1"
+          id="ttrack1"
+          className="input borders"
+          onChange={handleBootCamp}
+        >
           <option id="disabled-value" value={""}>
             Choose a Technology Track
           </option>
@@ -85,10 +104,10 @@ const BootCampDetails = () => {
       <div className="flexElement">
         <Label labelFor="bCamp1" labelText="Select BootCamp:" />
         <select name="bCamp1" id="bCamp1" className="input borders">
-          <option id="disabled-value" disabled="disabled" value={""}>
+          <option id="disabled-value" value={""}>
             Choose a BootCamp
           </option>
-          {/* {bootCampOptions} */}
+          {bootCampOptions}
         </select>
       </div>
     </fieldset>
