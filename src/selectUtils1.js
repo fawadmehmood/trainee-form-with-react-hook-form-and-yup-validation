@@ -416,3 +416,51 @@ export const bootCamp1 = [
     bName: "Java 2 at Barani Institure RWP with QC360",
   },
 ];
+
+export const bc1 = [
+  {
+    labelFor: "city1",
+    labelText: "Select City",
+    name: "city1",
+    id: "city1",
+    defaultOption: "Choose City",
+  },
+  {
+    labelFor: "ttrack1",
+    labelText: "Select Technology Track",
+    name: "ttrack1",
+    id: "ttrack1",
+    defaultOption: "Choose a Technology Track",
+  },
+  {
+    labelFor: "bCamp1",
+    labelText: "Select BootCamp",
+    name: "bCamp1",
+    id: "bCamp1",
+    defaultOption: "Choose a BootCamp",
+  },
+];
+
+export const bc2 = [
+  {
+    labelFor: "city2",
+    labelText: "Select City",
+    name: "city2",
+    id: "city2",
+    defaultOption: "Choose City",
+  },
+  {
+    labelFor: "ttrack2",
+    labelText: "Select Technology Track",
+    name: "ttrack2",
+    id: "ttrack2",
+    defaultOption: "Choose a Technology Track",
+  },
+  {
+    labelFor: "bCamp2",
+    labelText: "Select BootCamp",
+    name: "bCamp2",
+    id: "bCamp2",
+    defaultOption: "Choose a BootCamp",
+  },
+];

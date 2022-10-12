@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Label from "../sharedComponents/Label";
-import { cities, techTrack, bootCamp1 } from "../selectUtils1";
-const BootCamp = () => {
+import { cities, techTrack, bootCamp1, bc1, bc2 } from "../selectUtils1";
+import Select from "../sharedComponents/Select";
+
+const BootCamp = (props) => {
+  const { bcP, legendText } = props;
   const [city, setCity] = useState([]);
   const [track, setTrack] = useState([]);
   const [bCamp, setBootcamp] = useState([]);
@@ -65,50 +68,58 @@ const BootCamp = () => {
     );
   });
 
+  const optionss = [citiesOptions, trackOptions, bootCampOptions];
+  const changes = [handleTrack, handleBootCamp];
+
+  const mapSelect = bcP.map((bc, index) => {
+    return (
+      <Select
+        key={bc.id}
+        labelFor={bc.labelFor}
+        labelText={bc.labelText}
+        name={bc.name}
+        id={bc.id}
+        defaultOption={bc.defaultOption}
+        options={optionss[index]}
+        handleChange={changes[index]}
+      />
+    );
+  });
+
   return (
     <fieldset className="border p-3">
-      <legend className="font-medium tracking-tighter ">
-        Boot Camp Priority
-      </legend>
+      <legend className="font-medium tracking-tighter ">{legendText}</legend>
 
-      <div className="flexElement">
-        <Label labelFor="city1" labelText="Select City:" />
-        <select
-          name="city1"
-          id="city1"
-          className="input borders"
-          onChange={handleTrack}
-        >
-          <option id="disabled-value" value={""}>
-            Choose City
-          </option>
-          {citiesOptions}
-        </select>
-      </div>
-      <div className="flexElement">
-        <Label labelFor="ttrack1" labelText="Select Technology Track:" />
-        <select
-          name="ttrack1"
-          id="ttrack1"
-          className="input borders"
-          onChange={handleBootCamp}
-        >
-          <option id="disabled-value" value={""}>
-            Choose a Technology Track
-          </option>
-          {trackOptions}
-        </select>
-      </div>
+      {mapSelect}
 
-      <div className="flexElement">
-        <Label labelFor="bCamp1" labelText="Select BootCamp:" />
-        <select name="bCamp1" id="bCamp1" className="input borders">
-          <option id="disabled-value" value={""}>
-            Choose a BootCamp
-          </option>
-          {bootCampOptions}
-        </select>
-      </div>
+      {/* <Select
+        labelFor="city1"
+        labelText="Select City"
+        name="city1"
+        id="city1"
+        handleTrack={handleTrack}
+        defaultOption="Choose City"
+        options={citiesOptions}
+      />
+
+      <Select
+        labelFor="ttrack1"
+        labelText="Select Technology Track"
+        name="ttrack1"
+        id="ttrack1"
+        handleTrack={handleBootCamp}
+        defaultOption="Choose a Technology Track"
+        options={trackOptions}
+      />
+
+      <Select
+        labelFor="bCamp1"
+        labelText="Select BootCamp"
+        name="bCamp1"
+        id="bCamp1"
+        defaultOption="Choose a BootCamp"
+        options={bootCampOptions}
+      /> */}
     </fieldset>
   );
 };

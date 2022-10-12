@@ -6,18 +6,18 @@ const Select = ({
   labelText,
   name,
   id,
-  handleTrack,
+  handleChange,
   defaultOption,
   options,
 }) => {
   return (
     <div className="flexElement">
-      <Label labelFor="city1" labelText="Select City:" />
+      <Label labelFor={labelFor} labelText={labelText} />
       <select
-        name={labelFor}
-        id={labelText}
+        name={name}
+        id={id}
         className="input borders"
-        onChange={handleTrack}
+        onChange={handleChange}
       >
         <option id="disabled-value" value={""}>
           {defaultOption}
