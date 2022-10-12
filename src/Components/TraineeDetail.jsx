@@ -3,12 +3,12 @@ import FormElement from "../sharedComponents/FormElement";
 
 const TraineeDetail = () => {
   return (
-    <>
-      <fieldset className="border p-3">
-        <legend className="font-medium tracking-tighter ">About Trainee</legend>
+    <div className="vGap">
+      <fieldset className="borders p-3">
+        <legend className="legendText">About Trainee</legend>
 
-        <div className="flex gap-8">
-          <div className="left flex-1">
+        <div className="row">
+          <div className="left flexChild">
             <FormElement
               labelFor="fullName"
               labelText="Full Name"
@@ -33,7 +33,7 @@ const TraineeDetail = () => {
             />
           </div>
 
-          <div className="right flex-1">
+          <div className="right flexChild">
             <FormElement
               labelFor="email"
               labelText="Email"
@@ -60,7 +60,7 @@ const TraineeDetail = () => {
           </div>
         </div>
       </fieldset>
-    </>
+    </div>
   );
 };
 

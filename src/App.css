@@ -11,16 +11,32 @@ body {
 }
 
 .input {
-  @apply w-full h-9 rounded-md px-3 py-1 placeholder:text-gray-400 placeholder:text-xs;
+  @apply w-full h-9 rounded-md px-3 py-1 text-sm text-gray-500 placeholder:text-gray-400 placeholder:text-xs;
 }
+
 .borders {
   @apply border border-solid border-gray-300;
 }
 
+.legendText {
+  @apply font-medium tracking-tighter;
+}
+
 .row {
-  @apply flex;
+  @apply flex gap-8;
+}
+
+.col {
+}
+
+.flexChild {
+  @apply flex-1;
 }
 
 .flexElement {
-  @apply flex gap-8 items-center;
+  @apply flex gap-8 items-center my-4;
+}
+
+.vGap {
+  @apply py-10;
 }

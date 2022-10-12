@@ -87,8 +87,8 @@ const BootCamp = (props) => {
   });
 
   return (
-    <fieldset className="border p-3">
-      <legend className="font-medium tracking-tighter ">{legendText}</legend>
+    <fieldset className="borders p-3">
+      <legend className="legendText">{legendText}</legend>
 
       {mapSelect}
 
