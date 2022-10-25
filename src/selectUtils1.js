@@ -465,6 +465,25 @@ export const bc2 = [
   },
 ];
 
+export const companyName = [
+  { id: 1, compName: "ArhamSoft (Pvt) Ltd" },
+  { id: 2, compName: "Bitsol Technologies" },
+  { id: 3, compName: "CARE PVT LTD" },
+  { id: 4, compName: "Codeninja Consultancy" },
+  { id: 5, compName: "Contour Software (PVT) LTD" },
+  { id: 6, compName: "CureMD Pakistan (Pvt.) Ltd" },
+  { id: 7, compName: "Datics AI" },
+  { id: 8, compName: "Devspot Pvt.ltd" },
+  { id: 9, compName: "Emerald Labs" },
+  { id: 10, compName: "Excellence Delivered ExD Pvt Ltd" },
+  { id: 11, compName: "FRAG Games" },
+  { id: 12, compName: "Luminogics (SMC-PVT) LTD " },
+  { id: 13, compName: "NorthBay Solutions (Pvt.) Ltd." },
+  { id: 14, compName: "OneScreen" },
+  { id: 15, compName: "Quality Compliance 360" },
+  { id: 16, compName: "Smart IS" },
+];
+
 export const uniOptions = [
   {
     value: "Capital University of Science & Technology",
@@ -475,13 +494,16 @@ export const uniOptions = [
     value: "National Defence University, Pakistan",
     label: "National Defence University, Pakistan",
   },
+  {
+    value: "Allama Iqbal Open University",
+    label: "Allama Iqbal Open University",
+  },
+  {
+    value: "International Islamic University, Islamabad",
+    label: "International Islamic University, Islamabad",
+  },
 ];
 
-// Capital University of Science & Technology
-// Quaid-i-Azam University
-// National Defence University, Pakistan
-// Allama Iqbal Open University
-// International Islamic University, Islamabad
 // National University of Sciences and Technology, Pakistan
 // COMSATS University
 // National University of Computer and Emerging Sciences

@@ -2,6 +2,7 @@ import React from "react";
 import TraineeDetail from "./TraineeDetail";
 import BootCampDetails from "./BootCampDetails";
 import AcademicDetails from "./AcademicDetails";
+import JobExperience from "./JobExperience";
 
 const Form = () => {
   return (
@@ -24,6 +25,7 @@ const Form = () => {
         </div>
         <TraineeDetail />
         <AcademicDetails />
+        <JobExperience />
       </form>
     </div>
   );
