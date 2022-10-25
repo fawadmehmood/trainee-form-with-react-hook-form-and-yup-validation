@@ -464,3 +464,196 @@ export const bc2 = [
     defaultOption: "Choose a BootCamp",
   },
 ];
+
+export const uniOptions = [
+  {
+    value: "Capital University of Science & Technology",
+    label: "Capital University of Science & Technology",
+  },
+  { value: "Quaid-i-Azam University", label: "Quaid-i-Azam University" },
+  {
+    value: "National Defence University, Pakistan",
+    label: "National Defence University, Pakistan",
+  },
+];
+
+// Capital University of Science & Technology
+// Quaid-i-Azam University
+// National Defence University, Pakistan
+// Allama Iqbal Open University
+// International Islamic University, Islamabad
+// National University of Sciences and Technology, Pakistan
+// COMSATS University
+// National University of Computer and Emerging Sciences
+// Bahria University
+// Federal Urdu University of Arts, Science and Technology
+// Foundation University, Islamabad
+// National University of Modern Languages
+// Air University, Islamabad
+// Shifa Tameer-e-Millat University
+// Shaheed Zulfiqar Ali Bhutto Medical University
+// National University of Technology
+// National Skills University
+// University of Balochistan
+// Balochistan University of Engineering and Technology
+// Al-Hamd Islamic University
+// Balochistan University of Information Technology, Engineering and Management Sciences
+// Sardar Bahadur Khan Women's University
+// Lasbela University of Agriculture, Water and Marine Sciences
+// University of Turbat
+// University of Loralai
+// Mir Chakar Khan Rind University
+// Islamia College University
+// University of Peshawar
+// Gomal University
+// University of Engineering and Technology, Peshawar
+// University of Agriculture, Peshawar
+// Preston University
+// CECOS University of Information Technology and Emerging Sciences
+// Kohat University of Science and Technology
+// University of Malakand
+// Qurtuba University
+// Sarhad University of Science and Information Technology
+// City University of Science and Information Technology, Peshawar
+// Hazara University
+// Gandhara University
+// Northern University, Nowshera
+// University of Science and Technology Bannu
+// Shaheed Benazir Bhutto Women University
+// Khyber Medical University
+// Abasyn University
+// Abdul Wali Khan University Mardan
+// Shaheed Benazir Bhutto University, Sheringal
+// University of Swat
+// Bacha Khan University
+// University of Haripur
+// IQRA National University
+// Khushal Khan Khattak University
+// University of Swabi
+// University of Buner
+// Abbottabad University of Science and Technology
+// Women University Mardan
+// Women University Swabi
+// University of Technology, Nowshera
+// FATA University
+// University of Chitral
+// University of Engineering and Technology, Mardan
+// University of Agriculture, Dera Ismail Khan
+// University of Lakki Marwat
+// University of Dir
+// King Edward Medical University
+// Government College University, Lahore
+// University of Veterinary and Animal Sciences
+// University of the Punjab
+// Punjab Tianjin University of Technology
+// University of Agriculture, Faisalabad
+// Kinnaird College for Women University
+// University of Engineering and Technology, Lahore
+// Lahore College for Women University
+// Government College University, Faisalabad
+// Fatima Jinnah Medical University
+// National Textile University
+// Pir Mehr Ali Shah Arid Agriculture University
+// Bahauddin Zakariya University
+// The Islamia University of Bahawalpur
+// University of Engineering and Technology, Taxila
+// Lahore University of Management Sciences
+// University of Management and Technology, Lahore
+// Fatima Jinnah Women University
+// University of Sargodha
+// University of Health Sciences, Lahore
+// University of Education
+// GIFT University
+// Hajvery University
+// University of Central Punjab
+// University of Faisalabad
+// University of Lahore
+// Beaconhouse National University
+// University of South Asia
+// University of Gujrat
+// Superior University
+// Minhaj University, Lahore
+// HITEC University
+// University of Wah
+// Women University Multan
+// Qarshi University
+// Government College Women University, Sialkot
+// Government Sadiq College Women University
+// Ghazi University
+// Government College Women University, Faisalabad
+// Information Technology University (Lahore)
+// Muhammad Nawaz Sharif University of Agriculture
+// Muhammad Nawaz Sharif University of Engineering and Technology
+// Virtual University of Pakistan
+// Lahore Garrison University
+// Cholistan University of Veterinary and Animal Sciences
+// Khawaja Fareed University of Engineering and Information Technology
+// University of Engineering and Technology, Rasul
+// University of Sahiwal
+// University of Okara
+// University of Jhang
+// NUR International University
+// University of Sialkot
+// Faisalabad Medical University
+// Rawalpindi Medical University
+// Nishtar Medical University
+// National University of Medical Sciences
+// University of Home Economics Lahore
+// Mir Chakar Khan Rind University of Technology
+// Rawalpindi Women University
+// University of Narowal
+// Al-Qadir University
+// Baba Guru Nanak University
+// University of Chakwal
+// Kohsar University Murree
+// Liaquat University of Medical and Health Sciences
+// Sindh Madressatul Islam University
+// NED University of Engineering and Technology
+// Dow University of Health Sciences
+// University of Sindh
+// University of Karachi
+// Dawood University of Engineering and Technology
+// Mehran University of Engineering and Technology
+// Shah Abdul Latif University
+// Quaid-e-Awam University of Engineering, Science and Technology
+// Sindh Agriculture University
+// Baqai Medical University
+// Hamdard University
+// Sir Syed University of Engineering and Technology
+// Sukkur IBA University
+// Isra University
+// Greenwich University, Karachi
+// Jinnah University for Women
+// Iqra University
+// Ilma University
+// Indus University
+// University of EAST
+// Aga Khan University
+// Shaheed Mohtarma Benazir Bhutto Medical University
+// Muhammad Ali Jinnah University
+// Habib University
+// Benazir Bhutto Shaheed University
+// Shaheed Benazir Bhutto University, Nawabshah
+// Jinnah Sindh Medical University
+// Shaheed Zulfiqar Ali Bhutto University of Law
+// DHA Suffa University
+// Nazeer Hussain University
+// Peoples University of Medical and Health Sciences for Women
+// Shaheed Benazir Bhutto University of Veterinary and Animal Sciences
+// Shaheed Benazir Bhutto City University
+// Shaheed Benazir Bhutto Dewan University
+// Begum Nusrat Bhutto Women University
+// University of Sufism and Modern Sciences
+// Government College University Hyderabad
+// Shaikh Ayaz University
+// Ziauddin University
+// Salim Habib University
+// Mirpur University of Science and Technology
+// University of Azad Jammu and Kashmir
+// University of Poonch
+// Al-Khair University
+// Mohi-ud-Din Islamic University
+// Women University of Azad Jammu and Kashmir Bagh
+// University of Kotli
+// Karakoram International University
+// Baltistan University

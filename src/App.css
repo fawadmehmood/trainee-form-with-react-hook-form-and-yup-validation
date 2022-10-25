@@ -40,3 +40,7 @@ body {
 .vGap {
   @apply py-10;
 }
+
+.eduField {
+  @apply border-t-2 relative;
+}

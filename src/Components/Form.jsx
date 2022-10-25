@@ -1,7 +1,7 @@
 import React from "react";
 import TraineeDetail from "./TraineeDetail";
 import BootCampDetails from "./BootCampDetails";
-import FormElement from "../sharedComponents/FormElement";
+import AcademicDetails from "./AcademicDetails";
 
 const Form = () => {
   return (
@@ -23,6 +23,7 @@ const Form = () => {
           </label>
         </div>
         <TraineeDetail />
+        <AcademicDetails />
       </form>
     </div>
   );

@@ -10,6 +10,12 @@ module.exports = {
       fontFamily: {
         noto: ["Noto Sans", "sans-serif"],
       },
+      flexBasis: {
+        "1/7": "15.097%",
+      },
+      colors: {
+        blue: "#006986",
+      },
     },
   },
   plugins: [
