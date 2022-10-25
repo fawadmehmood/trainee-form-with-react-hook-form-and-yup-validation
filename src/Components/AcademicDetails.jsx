@@ -4,15 +4,18 @@ import Select from "react-select";
 import { uniOptions } from "../selectUtils1";
 import { useForm, useFieldArray } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import { useFormContext } from "react-hook-form";
 
 const AcademicDetails = () => {
-  const { control, register } = useForm({
-    defaultValues: {
-      EducationDetail: [
-        { degree: "", yog: "", cgpa: "", specialization: "", univeristy: "" },
-      ],
-    },
-  });
+  const { control } = useFormContext();
+
+  // const { control, register } = useForm({
+  //   defaultValues: {
+  //     EducationDetail: [
+  //       { degree: "", yog: "", cgpa: "", specialization: "", univeristy: "" },
+  //     ],
+  //   },
+  // });
   const { fields, append, remove } = useFieldArray({
     control, // control props comes from useForm (optional: if you are using FormContext)
     name: "EducationDetail", // unique name for your Field Array
@@ -49,7 +52,6 @@ const AcademicDetails = () => {
   };
 
   const educationDetails = fields.map((field, index) => {
-    console.log(index);
     return (
       <div
         className={"academicDetails" + (index > 0 ? " eduField" : "")}
@@ -64,39 +66,47 @@ const AcademicDetails = () => {
         )}
         <div className="row">
           <div className="left flexChild">
-            <FormElement
-              labelFor={`education[${index}].degree`}
-              labelText="Degree"
-              inputType="text"
-              inputAttr={`education[${index}].degree`}
-              inputPlaceholder="Enter Degree"
-            />
+            <div className="formElemMy">
+              <FormElement
+                labelFor={`education[${index}].degree`}
+                labelText="Degree"
+                inputType="text"
+                inputAttr={`education[${index}].degree`}
+                inputPlaceholder="Enter Degree"
+              />
+            </div>
 
-            <FormElement
-              labelFor={`education[${index}].yog`}
-              labelText="Year of Graduation"
-              inputType="text"
-              inputAttr={`education[${index}].yog`}
-              inputPlaceholder="Enter Year of Graduation"
-            />
+            <div className="formElemMy">
+              <FormElement
+                labelFor={`education[${index}].yog`}
+                labelText="Year of Graduation"
+                inputType="text"
+                inputAttr={`education[${index}].yog`}
+                inputPlaceholder="Enter Year of Graduation"
+              />
+            </div>
           </div>
 
           <div className="right flexChild">
-            <FormElement
-              labelFor={`education[${index}].cgpa`}
-              labelText="CGPA/PCT"
-              inputType="number"
-              inputAttr={`education[${index}].cgpa`}
-              inputPlaceholder="Enter CGPA/PCT"
-            />
+            <div className="formElemMy">
+              <FormElement
+                labelFor={`education[${index}].cgpa`}
+                labelText="CGPA/PCT"
+                inputType="number"
+                inputAttr={`education[${index}].cgpa`}
+                inputPlaceholder="Enter CGPA/PCT"
+              />
+            </div>
 
-            <FormElement
-              labelFor={`education[${index}].specialization`}
-              labelText="Specialization (Bachelor's)"
-              inputType="text"
-              inputAttr={`education[${index}].specialization`}
-              inputPlaceholder="Enter Specialization"
-            />
+            <div className="formElemMy">
+              <FormElement
+                labelFor={`education[${index}].specialization`}
+                labelText="Specialization (Bachelor's)"
+                inputType="text"
+                inputAttr={`education[${index}].specialization`}
+                inputPlaceholder="Enter Specialization"
+              />
+            </div>
           </div>
         </div>
 

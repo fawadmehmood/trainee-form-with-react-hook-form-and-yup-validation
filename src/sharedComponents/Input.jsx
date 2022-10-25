@@ -1,6 +1,9 @@
 import React from "react";
+import { useFormContext } from "react-hook-form";
 
 const Input = ({ inputType, inputAttr, inputPlaceholder }) => {
+  const { register } = useFormContext();
+
   return (
     <input
       className="input borders"
@@ -8,6 +11,7 @@ const Input = ({ inputType, inputAttr, inputPlaceholder }) => {
       name={inputAttr}
       id={inputAttr}
       placeholder={inputPlaceholder}
+      {...register(inputAttr)}
     />
   );
 };

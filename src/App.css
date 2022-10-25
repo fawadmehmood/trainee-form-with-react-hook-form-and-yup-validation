@@ -26,7 +26,8 @@ body {
   @apply flex gap-8;
 }
 
-.col {
+.formElemMy {
+  @apply my-4;
 }
 
 .flexChild {
@@ -34,7 +35,7 @@ body {
 }
 
 .flexElement {
-  @apply flex gap-8 items-center my-4;
+  @apply flex gap-8 items-center;
 }
 
 .vGap {
