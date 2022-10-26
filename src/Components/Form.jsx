@@ -50,7 +50,10 @@ const Form = () => {
           <AcademicDetails />
           <JobExperience />
 
-          <input type="submit" />
+          <input
+            type="submit"
+            className="borders py-2 px-5 text-sm text-white bg-blue"
+          />
         </form>
       </FormProvider>
     </div>

@@ -8,7 +8,7 @@ export const schemas = yup.object().shape({
 
   dob: yup
     .date()
-    .default(() => new Date())
+    // .default(() => new Date())
     .required("DOB is required"),
 
   cnic: yup

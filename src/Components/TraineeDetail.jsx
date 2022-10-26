@@ -22,6 +22,7 @@ const TraineeDetail = () => {
                 inputType="text"
                 inputAttr="fullName"
                 inputPlaceholder="Enter Full Name"
+                isRequired={false}
               />
               {errors?.fullName && (
                 <ErrorText errorMessage={errors.fullName.message} />

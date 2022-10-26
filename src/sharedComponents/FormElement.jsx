@@ -8,6 +8,7 @@ const FormElement = ({
   inputType,
   inputAttr,
   inputPlaceholder,
+  isRequired,
 }) => {
   return (
     <div className="flexElement">
@@ -16,6 +17,7 @@ const FormElement = ({
         inputType={inputType}
         inputAttr={inputAttr}
         inputPlaceholder={inputPlaceholder}
+        isRequired={isRequired}
       />
     </div>
   );

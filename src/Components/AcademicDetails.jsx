@@ -5,9 +5,13 @@ import { uniOptions } from "../selectUtils1";
 import { useForm, useFieldArray } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useFormContext } from "react-hook-form";
+import ErrorText from "../sharedComponents/ErrorText";
 
 const AcademicDetails = () => {
-  const { control } = useFormContext();
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
 
   // const { control, register } = useForm({
   //   defaultValues: {
@@ -140,7 +144,7 @@ const AcademicDetails = () => {
         <div className="row justify-end">
           <button
             type="button"
-            className="borders py-2 px-5 text-sm text-white bg-blue"
+            className="btn border-2 text-blue font-extrabold border-blue hover:btnHover"
             onClick={() =>
               append({
                 degree: "",

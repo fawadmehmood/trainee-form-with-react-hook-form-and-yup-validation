@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 
-const Input = ({ inputType, inputAttr, inputPlaceholder }) => {
-  const { register } = useFormContext();
+const Input = ({ inputType, inputAttr, inputPlaceholder, isRequired }) => {
+  const { register, unregister } = useFormContext();
+
+  // useEffect(() => {
+  //   if (!isRequired) {
+  //     console.log(isRequired);
+  //     unregister(inputAttr);
+  //   }
+  //    else {
+  //     register(inputAttr);
+  //   }
+  // }, [isRequired, unregister]);
 
   return (
     <input

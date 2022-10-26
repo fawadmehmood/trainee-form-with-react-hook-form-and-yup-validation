@@ -23,8 +23,6 @@ const BootCamp = (props) => {
   });
 
   const handleTrack = (e) => {
-    setTrack([]);
-
     const id = parseInt(e.target.value);
     const { technologyTrack } = cities.find((city) => city.id === id);
 
@@ -73,16 +71,17 @@ const BootCamp = (props) => {
 
   const mapSelect = bcP.map((bc, index) => {
     return (
-      <Select
-        key={bc.id}
-        labelFor={bc.labelFor}
-        labelText={bc.labelText}
-        name={bc.name}
-        id={bc.id}
-        defaultOption={bc.defaultOption}
-        options={optionss[index]}
-        handleChange={changes[index]}
-      />
+      <div className="formElemMy" key={bc.id}>
+        <Select
+          labelFor={bc.labelFor}
+          labelText={bc.labelText}
+          name={bc.name}
+          id={bc.id}
+          defaultOption={bc.defaultOption}
+          options={optionss[index]}
+          handleChange={changes[index]}
+        />
+      </div>
     );
   });
 
