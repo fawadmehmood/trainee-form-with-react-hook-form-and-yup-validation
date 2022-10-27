@@ -70,51 +70,43 @@ const AcademicDetails = () => {
         )}
         <div className="row">
           <div className="left flexChild">
-            <div className="formElemMy">
-              <FormElement
-                labelFor={`education[${index}].degree`}
-                labelText="Degree"
-                inputType="text"
-                inputAttr={`education[${index}].degree`}
-                inputPlaceholder="Enter Degree"
-              />
-            </div>
+            <FormElement
+              labelFor={`education[${index}].degree`}
+              labelText="Degree"
+              inputType="text"
+              inputAttr={`education[${index}].degree`}
+              inputPlaceholder="Enter Degree"
+            />
 
-            <div className="formElemMy">
-              <FormElement
-                labelFor={`education[${index}].yog`}
-                labelText="Year of Graduation"
-                inputType="text"
-                inputAttr={`education[${index}].yog`}
-                inputPlaceholder="Enter Year of Graduation"
-              />
-            </div>
+            <FormElement
+              labelFor={`education[${index}].yog`}
+              labelText="Year of Graduation"
+              inputType="text"
+              inputAttr={`education[${index}].yog`}
+              inputPlaceholder="Enter Year of Graduation"
+            />
           </div>
 
           <div className="right flexChild">
-            <div className="formElemMy">
-              <FormElement
-                labelFor={`education[${index}].cgpa`}
-                labelText="CGPA/PCT"
-                inputType="number"
-                inputAttr={`education[${index}].cgpa`}
-                inputPlaceholder="Enter CGPA/PCT"
-              />
-            </div>
+            <FormElement
+              labelFor={`education[${index}].cgpa`}
+              labelText="CGPA/PCT"
+              inputType="number"
+              inputAttr={`education[${index}].cgpa`}
+              inputPlaceholder="Enter CGPA/PCT"
+            />
 
-            <div className="formElemMy">
-              <FormElement
-                labelFor={`education[${index}].specialization`}
-                labelText="Specialization (Bachelor's)"
-                inputType="text"
-                inputAttr={`education[${index}].specialization`}
-                inputPlaceholder="Enter Specialization"
-              />
-            </div>
+            <FormElement
+              labelFor={`education[${index}].specialization`}
+              labelText="Specialization (Bachelor's)"
+              inputType="text"
+              inputAttr={`education[${index}].specialization`}
+              inputPlaceholder="Enter Specialization"
+            />
           </div>
         </div>
 
-        <div className="flexElement">
+        <div className="flexElement my-4">
           <label
             className="basis-1/7 text-right text-xs"
             htmlFor={`education[${index}].univeristy`}
