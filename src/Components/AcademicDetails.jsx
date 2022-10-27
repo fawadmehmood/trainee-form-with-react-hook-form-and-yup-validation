@@ -6,6 +6,7 @@ import { useForm, useFieldArray } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useFormContext } from "react-hook-form";
 import ErrorText from "../sharedComponents/ErrorText";
+import { ErrorMessage } from "@hookform/error-message";
 
 const AcademicDetails = () => {
   const {
@@ -81,7 +82,7 @@ const AcademicDetails = () => {
             <FormElement
               labelFor={`education[${index}].yog`}
               labelText="Year of Graduation"
-              inputType="text"
+              inputType="number"
               inputAttr={`education[${index}].yog`}
               inputPlaceholder="Enter Year of Graduation"
             />
@@ -120,6 +121,7 @@ const AcademicDetails = () => {
             isClearable={true}
             id={`education[${index}].univeristy`}
             name={`education[${index}].univeristy`}
+            placeholder="Choose a university"
           />
         </div>
       </div>
