@@ -1,5 +1,6 @@
 import React from "react";
 import Label from "../sharedComponents/Label";
+import { useFormContext } from "react-hook-form";
 
 const Select = ({
   labelFor,
@@ -10,15 +11,12 @@ const Select = ({
   defaultOption,
   options,
 }) => {
+  const { register, unregister } = useFormContext();
+
   return (
     <div className="flexElement">
       <Label labelFor={labelFor} labelText={labelText} />
-      <select
-        name={name}
-        id={id}
-        className="input borders"
-        onChange={handleChange}
-      >
+      <select name={name} id={id} className="input borders" {...register(name)}>
         <option id="disabled-value" value={""}>
           {defaultOption}
         </option>

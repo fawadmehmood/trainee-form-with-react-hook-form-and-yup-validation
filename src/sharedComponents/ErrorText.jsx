@@ -1,8 +1,18 @@
 import React from "react";
+import { ErrorMessage } from "@hookform/error-message";
 
-const ErrorText = ({ errorMessage }) => {
+const ErrorText = ({ errors, name, errorMessage }) => {
+  console.log(errorMessage);
   return (
-    <p className="text-xs text-red-500 text-right italic">{errorMessage}</p>
+    <ErrorMessage
+      errors={errors}
+      name={name}
+      render={({ errorMessage }) => (
+        <p className="text-xs text-red-500 text-right italic">{errorMessage}</p>
+      )}
+    />
+
+    // <p className="text-xs text-red-500 text-right italic">{errorMessage}</p>
   );
 };
 

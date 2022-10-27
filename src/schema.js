@@ -1,6 +1,14 @@
 import * as yup from "yup";
 
 export const schemas = yup.object().shape({
+  city1: yup.string().required("City is required"),
+  ttrack1: yup.string().required("Technology Track is required"),
+  bCamp1: yup.string().required("Bootcamp is required"),
+
+  city2: yup.string().required("City is required"),
+  ttrack2: yup.string().required("Technology Track is required"),
+  bCamp2: yup.string().required("Bootcamp is required"),
+
   fullName: yup
     .string()
     .max(50, "There should be maximum 50 characters")

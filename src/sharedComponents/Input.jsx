@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 const Input = ({ inputType, inputAttr, inputPlaceholder, isRequired }) => {
   const { register, unregister } = useFormContext();

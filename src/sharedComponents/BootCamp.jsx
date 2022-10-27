@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Label from "../sharedComponents/Label";
 import { cities, techTrack, bootCamp1, bc1, bc2 } from "../selectUtils1";
 import Select from "../sharedComponents/Select";
+import ErrorText from "../sharedComponents/ErrorText";
+import { useFormContext } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 const BootCamp = (props) => {
   const { bcP, legendText } = props;
@@ -9,6 +12,10 @@ const BootCamp = (props) => {
   const [track, setTrack] = useState([]);
   const [bCamp, setBootcamp] = useState([]);
   const [cityId, setCityId] = useState(1);
+
+  const {
+    formState: { errors },
+  } = useFormContext();
 
   useEffect(() => {
     setCity(cities);
@@ -24,8 +31,12 @@ const BootCamp = (props) => {
 
   const handleTrack = (e) => {
     const id = parseInt(e.target.value);
-    const { technologyTrack } = cities.find((city) => city.id === id);
+    const { technologyTrack } = cities.find((city) => city.id === id) || {};
 
+    if (technologyTrack === undefined) {
+      setTrack([]);
+      return;
+    }
     const technologyTrackOptions = technologyTrack.map((id) => {
       return techTrack.find((tr) => {
         return tr.id === id;
@@ -71,7 +82,7 @@ const BootCamp = (props) => {
 
   const mapSelect = bcP.map((bc, index) => {
     return (
-      <div className="formElemMy" key={bc.id}>
+      <div className="formElemMy" key={bc.id} onChange={changes[index]}>
         <Select
           labelFor={bc.labelFor}
           labelText={bc.labelText}
@@ -80,6 +91,14 @@ const BootCamp = (props) => {
           defaultOption={bc.defaultOption}
           options={optionss[index]}
           handleChange={changes[index]}
+        />
+
+        <ErrorMessage
+          errors={errors}
+          name={bc.name}
+          render={({ message }) => (
+            <p className="text-xs text-red-500 text-right italic">{message}</p>
+          )}
         />
       </div>
     );
