@@ -54,6 +54,14 @@ export const schemas = yup.object().shape({
         .string()
         .max(50, "There should be maximum 50 characters")
         .notRequired(),
+
+      univeristy: yup.object().required("University is required"),
+      // univeristy: yup.object(
+      //   yup.string({
+      //     label: yup.string().required("Required"),
+      //     value: yup.string().required("Required"),
+      //   })
+      // ),
     })
   ),
 });

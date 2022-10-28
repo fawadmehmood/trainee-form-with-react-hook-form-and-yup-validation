@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import FormElement from "../sharedComponents/FormElement";
 import Select from "react-select";
 import { uniOptions } from "../selectUtils1";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useFieldArray, Controller } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useFormContext } from "react-hook-form";
-import ErrorText from "../sharedComponents/ErrorText";
 import { ErrorMessage } from "@hookform/error-message";
 
 const AcademicDetails = () => {
@@ -107,21 +106,40 @@ const AcademicDetails = () => {
           </div>
         </div>
 
-        <div className="flexElement my-4">
-          <label
-            className="basis-1/7 text-right text-xs"
-            htmlFor={`education[${index}].univeristy`}
-          >
-            University:
-          </label>
-          <Select
-            className="w-full"
-            styles={customStyles}
-            options={uniOptions}
-            isClearable={true}
-            id={`education[${index}].univeristy`}
+        <div className="formElemMy">
+          <div className="flexElement">
+            <label
+              className="basis-1/7 text-right text-xs"
+              htmlFor={`education[${index}].univeristy`}
+            >
+              University:
+            </label>
+
+            <Controller
+              name={`education[${index}].univeristy`}
+              control={control}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  className="w-full"
+                  styles={customStyles}
+                  options={uniOptions}
+                  isClearable={true}
+                  id={`education[${index}].univeristy`}
+                  // name={`education[${index}].univeristy`}
+                  placeholder="Choose a university"
+                />
+              )}
+            />
+          </div>
+          <ErrorMessage
+            errors={errors}
             name={`education[${index}].univeristy`}
-            placeholder="Choose a university"
+            render={({ message }) => (
+              <p className="text-xs text-red-500 text-right italic">
+                {message}
+              </p>
+            )}
           />
         </div>
       </div>
