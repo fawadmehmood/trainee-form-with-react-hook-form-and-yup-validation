@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import FormElement from "../sharedComponents/FormElement";
 import Select from "../sharedComponents/Select";
 import { companyName } from "../selectUtils1";
+import { ErrorMessage } from "@hookform/error-message";
+import { useFormContext } from "react-hook-form";
 
 const JobExperience = () => {
   const [selected, setSelected] = useState("no");
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   const handleChange = (event) => {
     setSelected(event.target.value);
@@ -33,6 +39,7 @@ const JobExperience = () => {
                 name="experience"
                 id="yes"
                 value="yes"
+                {...register("experience")}
                 checked={selected === "yes"}
                 onChange={handleChange}
               />
@@ -47,6 +54,7 @@ const JobExperience = () => {
                 name="experience"
                 id="no"
                 value="no"
+                {...register("experience")}
                 onChange={handleChange}
                 checked={selected === "no"}
               />
@@ -54,6 +62,15 @@ const JobExperience = () => {
                 No
               </label>
             </div>
+            <ErrorMessage
+              errors={errors}
+              name="experience"
+              render={({ message }) => (
+                <p className="text-xs text-red-500 text-right italic">
+                  {message}
+                </p>
+              )}
+            />
           </div>
         </div>
 
@@ -88,6 +105,15 @@ const JobExperience = () => {
                   id="companies"
                   defaultOption="Choose Company"
                   options={companiesOption}
+                />
+                <ErrorMessage
+                  errors={errors}
+                  name="companies"
+                  render={({ message }) => (
+                    <p className="text-xs text-red-500 text-right italic">
+                      {message}
+                    </p>
+                  )}
                 />
               </div>
             </div>
