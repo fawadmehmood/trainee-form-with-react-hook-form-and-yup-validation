@@ -39,7 +39,7 @@ body {
 }
 
 .vGap {
-  @apply py-10;
+  @apply py-5;
 }
 
 .eduField {

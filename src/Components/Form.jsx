@@ -35,16 +35,18 @@ const Form = () => {
       <FormProvider {...methods}>
         <form onSubmit={methods.handleSubmit(submitForm, handleErrors)}>
           <BootCampDetails />
-          <div className="borders text-center py-6 flex align-middle justify-center">
-            <input
-              type="checkbox"
-              name="graducationCompleted"
-              id="graducationCompleted"
-              className="w-4 h-4"
-            />
-            <label htmlFor="graducationCompleted" className="text-sm ml-4">
-              I graduated during or after 2017.
-            </label>
+          <div className="vGap">
+            <div className="borders py-6 text-center flex align-middle justify-center">
+              <input
+                type="checkbox"
+                name="graducationCompleted"
+                id="graducationCompleted"
+                className="w-4 h-4"
+              />
+              <label htmlFor="graducationCompleted" className="text-sm ml-4">
+                I graduated during or after 2017.
+              </label>
+            </div>
           </div>
           <TraineeDetail />
           <AcademicDetails />
