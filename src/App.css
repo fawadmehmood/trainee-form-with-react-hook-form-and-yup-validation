@@ -35,7 +35,7 @@ body {
 }
 
 .flexElement {
-  @apply flex flex-col gap-2 md:flex-row md:gap-4;
+  @apply flex flex-col gap-2 md:flex-row md:gap-4 md:items-center;
 }
 
 .vGap {

@@ -31,7 +31,7 @@ export const schemas = yup.object().shape({
   mobileNumber: yup
     .string()
     .required("Phone number is Required")
-    .matches(/^(0)[0-9]{10}$/, "Phone number is not valid"),
+    .matches(/^(\+92|0|92)[0-9]{10}$/, "Phone number is not valid"),
 
   address: yup.string().required("Address is required"),
 
