@@ -23,19 +23,21 @@ body {
 }
 
 .row {
-  @apply flex gap-8;
+  @apply flex flex-col gap-4;
 }
 
 .formElemMy {
-  @apply my-4;
+  /* @apply my-4; */
 }
 
 .flexChild {
-  @apply flex-1;
+  @apply flex flex-col gap-4;
 }
 
+/* flex-1  */
+
 .flexElement {
-  @apply flex gap-8 items-center;
+  @apply flex flex-col gap-2;
 }
 
 .vGap {

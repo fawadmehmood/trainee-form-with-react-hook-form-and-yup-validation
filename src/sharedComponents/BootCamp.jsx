@@ -109,7 +109,7 @@ const BootCamp = (props) => {
   });
 
   return (
-    <fieldset className="borders p-3">
+    <fieldset className="borders p-3 flexChild">
       <legend className="legendText">{legendText}</legend>
 
       {mapSelect}

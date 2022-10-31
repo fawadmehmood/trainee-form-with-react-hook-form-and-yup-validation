@@ -106,10 +106,10 @@ const AcademicDetails = () => {
           </div>
         </div>
 
-        <div className="formElemMy">
+        <div className="formElemMy my-4">
           <div className="flexElement">
             <label
-              className="basis-1/7 text-right text-xs"
+              className="basis-1/7 text-xs"
               htmlFor={`education[${index}].univeristy`}
             >
               University:

@@ -28,8 +28,8 @@ const JobExperience = () => {
     <div className="vGap">
       <fieldset className="borders p-3">
         <legend className="legendText">Job Experience</legend>
-        <div className="flexElement">
-          <p className="text-xs basis-1/7 text-right">
+        <div className="flexElement mb-4">
+          <p className="text-xs basis-1/7">
             Have you ever been or are you currently employed?
           </p>
           <div className="flex gap-3">
