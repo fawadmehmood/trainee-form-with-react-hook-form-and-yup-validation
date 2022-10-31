@@ -1,6 +1,7 @@
 import React from "react";
 import Label from "../sharedComponents/Label";
 import { useFormContext } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 const Select = ({
   labelFor,
@@ -11,17 +12,34 @@ const Select = ({
   defaultOption,
   options,
 }) => {
-  const { register, unregister } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
-    <div className="flexElement">
-      <Label labelFor={labelFor} labelText={labelText} />
-      <select name={name} id={id} className="input borders" {...register(name)}>
-        <option id="disabled-value" value={""}>
-          {defaultOption}
-        </option>
-        {options}
-      </select>
+    <div className="formElemMy">
+      <div className="flexElement" onChange={handleChange}>
+        <Label labelFor={labelFor} labelText={labelText} />
+        <select
+          name={name}
+          id={id}
+          className="input borders"
+          {...register(name)}
+        >
+          <option id="disabled-value" value={""}>
+            {defaultOption}
+          </option>
+          {options}
+        </select>
+      </div>
+      <ErrorMessage
+        errors={errors}
+        name={name}
+        render={({ message }) => (
+          <p className="text-xs text-red-500 text-right italic">{message}</p>
+        )}
+      />
     </div>
   );
 };

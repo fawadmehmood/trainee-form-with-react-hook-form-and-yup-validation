@@ -96,17 +96,17 @@ const JobExperience = () => {
                 />
               </div>
 
-              <div className="formElemMy">
-                <Select
-                  key="companies"
-                  labelFor="companies"
-                  labelText="Do you currently work at any of these companies?"
-                  name="companies"
-                  id="companies"
-                  defaultOption="Choose Company"
-                  options={companiesOption}
-                />
-                <ErrorMessage
+              {/* <div className="formElemMy"> */}
+              <Select
+                key="companies"
+                labelFor="companies"
+                labelText="Do you currently work at any of these companies?"
+                name="companies"
+                id="companies"
+                defaultOption="Choose Company"
+                options={companiesOption}
+              />
+              {/* <ErrorMessage
                   errors={errors}
                   name="companies"
                   render={({ message }) => (
@@ -114,8 +114,8 @@ const JobExperience = () => {
                       {message}
                     </p>
                   )}
-                />
-              </div>
+                /> */}
+              {/* </div> */}
             </div>
             <div className="right flexChild">
               <div className="formElemMy">

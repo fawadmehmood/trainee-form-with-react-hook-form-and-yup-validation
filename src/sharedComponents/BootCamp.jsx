@@ -82,25 +82,29 @@ const BootCamp = (props) => {
 
   const mapSelect = bcP.map((bc, index) => {
     return (
-      <div className="formElemMy" key={bc.id} onChange={changes[index]}>
-        <Select
-          labelFor={bc.labelFor}
-          labelText={bc.labelText}
-          name={bc.name}
-          id={bc.id}
-          defaultOption={bc.defaultOption}
-          options={optionss[index]}
-          handleChange={changes[index]}
-        />
+      // <div
+      // className="formElemMy"
+      // key={bc.id}
+      // onChange={changes[index]}>
+      <Select
+        key={bc.id}
+        labelFor={bc.labelFor}
+        labelText={bc.labelText}
+        name={bc.name}
+        id={bc.id}
+        defaultOption={bc.defaultOption}
+        options={optionss[index]}
+        handleChange={changes[index]}
+      />
 
-        <ErrorMessage
-          errors={errors}
-          name={bc.name}
-          render={({ message }) => (
-            <p className="text-xs text-red-500 text-right italic">{message}</p>
-          )}
-        />
-      </div>
+      // {/* <ErrorMessage
+      //   errors={errors}
+      //   name={bc.name}
+      //   render={({ message }) => (
+      //     <p className="text-xs text-red-500 text-right italic">{message}</p>
+      //   )}
+      // /> */}
+      // </div>
     );
   });
 
