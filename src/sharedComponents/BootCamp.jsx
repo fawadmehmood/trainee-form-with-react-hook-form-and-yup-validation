@@ -46,6 +46,11 @@ const BootCamp = (props) => {
       return city.id === cityId;
     });
 
+    if (isNaN(id)) {
+      setBootcamp([]);
+      return;
+    }
+
     const bootCampOptions = bootCmp[id].map((id) => {
       return bootCamp1.find((bc) => {
         return bc.id === id;
