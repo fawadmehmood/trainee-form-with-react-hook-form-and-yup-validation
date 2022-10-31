@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormElement from "../sharedComponents/FormElement";
 import Select from "../sharedComponents/Select";
-import { companyName } from "../selectUtils1";
+import { companyName } from "../selectUtils";
 import { ErrorMessage } from "@hookform/error-message";
 import { useFormContext } from "react-hook-form";
 

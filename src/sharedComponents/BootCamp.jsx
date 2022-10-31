@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Label from "../sharedComponents/Label";
-import { cities, techTrack, bootCamp1, bc1, bc2 } from "../selectUtils1";
+import { cities, techTrack, bootCamp1 } from "../selectUtils";
 import Select from "../sharedComponents/Select";
-import { useFormContext } from "react-hook-form";
 
 const BootCamp = (props) => {
   const { bcP, legendText } = props;

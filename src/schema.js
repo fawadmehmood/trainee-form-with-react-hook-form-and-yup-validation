@@ -59,31 +59,8 @@ export const schemas = yup.object().shape({
         .notRequired(),
 
       univeristy: yup.object().required("University is required"),
-      // univeristy: yup.object(
-      //   yup.string({
-      //     label: yup.string().required("Required"),
-      //     value: yup.string().required("Required"),
-      //   })
-      // ),
     })
   ),
-  // jobStart: yup
-  //   .date()
-  //   .nullable()
-  //   .max(new Date(), "Please choose future date")
-  //   .transform((value) => (isNaN(value) ? undefined : value)),
-
-  // jobEnd: yup
-  //   .date()
-  //   .transform((value) => (isNaN(value) ? undefined : value))
-  //   .when("jobStart", (jobStart, schema) => {
-  //     if (jobStart) {
-  //       const dayAfter = new Date(jobStart.getTime() + 86400000);
-  //       return schema.min(dayAfter, "End date has to be after the start date");
-  //     }
-
-  //     return schema;
-  //   }),
 
   experience: yup.string().required("Experience field is required"),
 
@@ -122,7 +99,6 @@ export const schemas = yup.object().shape({
     .when(["experience", "jobStart"], (experience, jobStart, schema) => {
       if (experience === "yes") {
         if (jobStart) {
-          console.log("hah");
           const dayAfter = new Date(jobStart.getTime() + 86400000);
           return schema.min(
             dayAfter,

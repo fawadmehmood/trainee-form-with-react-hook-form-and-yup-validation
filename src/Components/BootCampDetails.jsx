@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BootCamp from "../sharedComponents/BootCamp";
-import { bc1, bc2 } from "../selectUtils1";
+import { bc1, bc2 } from "../selectUtils";
 
 const BootCampDetails = () => {
   return (

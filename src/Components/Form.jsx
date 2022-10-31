@@ -21,12 +21,14 @@ const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = methods;
 
   const submitForm = (data) => {
-    // reset();
+    reset();
     console.log(data);
+    alert(JSON.stringify(data));
   };
 
   const handleErrors = (errors) => {

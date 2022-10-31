@@ -1,7 +1,7 @@
 import React from "react";
 import FormElement from "../sharedComponents/FormElement";
 import Select from "react-select";
-import { uniOptions } from "../selectUtils1";
+import { uniOptions } from "../selectUtils";
 import { useFieldArray, Controller } from "react-hook-form";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useFormContext } from "react-hook-form";
@@ -13,27 +13,10 @@ const AcademicDetails = () => {
     formState: { errors },
   } = useFormContext();
 
-  // const { control, register } = useForm({
-  //   defaultValues: {
-  //     EducationDetail: [
-  //       { degree: "", yog: "", cgpa: "", specialization: "", univeristy: "" },
-  //     ],
-  //   },
-  // });
   const { fields, append, remove } = useFieldArray({
     control, // control props comes from useForm (optional: if you are using FormContext)
     name: "EducationDetail", // unique name for your Field Array
   });
-
-  //   useEffect(() => {
-  //     append({
-  //       degree: "",
-  //       yog: "",
-  //       cgpa: "",
-  //       specialization: "",
-  //       univeristy: "",
-  //     });
-  //   }, []);
 
   const customStyles = {
     control: (base) => ({
