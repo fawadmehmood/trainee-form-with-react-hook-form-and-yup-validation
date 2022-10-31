@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import Label from "../sharedComponents/Label";
 import { cities, techTrack, bootCamp1, bc1, bc2 } from "../selectUtils1";
 import Select from "../sharedComponents/Select";
-import ErrorText from "../sharedComponents/ErrorText";
 import { useFormContext } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 
 const BootCamp = (props) => {
   const { bcP, legendText } = props;
@@ -12,10 +10,6 @@ const BootCamp = (props) => {
   const [track, setTrack] = useState([]);
   const [bCamp, setBootcamp] = useState([]);
   const [cityId, setCityId] = useState(1);
-
-  const {
-    formState: { errors },
-  } = useFormContext();
 
   useEffect(() => {
     setCity(cities);
@@ -82,10 +76,6 @@ const BootCamp = (props) => {
 
   const mapSelect = bcP.map((bc, index) => {
     return (
-      // <div
-      // className="formElemMy"
-      // key={bc.id}
-      // onChange={changes[index]}>
       <Select
         key={bc.id}
         labelFor={bc.labelFor}
@@ -96,52 +86,13 @@ const BootCamp = (props) => {
         options={optionss[index]}
         handleChange={changes[index]}
       />
-
-      // {/* <ErrorMessage
-      //   errors={errors}
-      //   name={bc.name}
-      //   render={({ message }) => (
-      //     <p className="text-xs text-red-500 text-right italic">{message}</p>
-      //   )}
-      // /> */}
-      // </div>
     );
   });
 
   return (
     <fieldset className="borders p-3 flexChild">
       <legend className="legendText">{legendText}</legend>
-
       {mapSelect}
-
-      {/* <Select
-        labelFor="city1"
-        labelText="Select City"
-        name="city1"
-        id="city1"
-        handleTrack={handleTrack}
-        defaultOption="Choose City"
-        options={citiesOptions}
-      />
-
-      <Select
-        labelFor="ttrack1"
-        labelText="Select Technology Track"
-        name="ttrack1"
-        id="ttrack1"
-        handleTrack={handleBootCamp}
-        defaultOption="Choose a Technology Track"
-        options={trackOptions}
-      />
-
-      <Select
-        labelFor="bCamp1"
-        labelText="Select BootCamp"
-        name="bCamp1"
-        id="bCamp1"
-        defaultOption="Choose a BootCamp"
-        options={bootCampOptions}
-      /> */}
     </fieldset>
   );
 };

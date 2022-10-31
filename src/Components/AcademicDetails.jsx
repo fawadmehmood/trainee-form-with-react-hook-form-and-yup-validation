@@ -74,16 +74,18 @@ const AcademicDetails = () => {
               labelFor={`education[${index}].degree`}
               labelText="Degree"
               inputType="text"
-              inputAttr={`education[${index}].degree`}
+              name={`education[${index}].degree`}
               inputPlaceholder="Enter Degree"
+              isRequired={true}
             />
 
             <FormElement
               labelFor={`education[${index}].yog`}
               labelText="Year of Graduation"
               inputType="number"
-              inputAttr={`education[${index}].yog`}
+              name={`education[${index}].yog`}
               inputPlaceholder="Enter Year of Graduation"
+              isRequired={true}
             />
           </div>
 
@@ -92,16 +94,18 @@ const AcademicDetails = () => {
               labelFor={`education[${index}].cgpa`}
               labelText="CGPA/PCT"
               inputType="number"
-              inputAttr={`education[${index}].cgpa`}
+              name={`education[${index}].cgpa`}
               inputPlaceholder="Enter CGPA/PCT"
+              isRequired={false}
             />
 
             <FormElement
               labelFor={`education[${index}].specialization`}
               labelText="Specialization (Bachelor's)"
               inputType="text"
-              inputAttr={`education[${index}].specialization`}
+              name={`education[${index}].specialization`}
               inputPlaceholder="Enter Specialization"
+              isRequired={false}
             />
           </div>
         </div>
@@ -109,10 +113,10 @@ const AcademicDetails = () => {
         <div className="formElemMy my-4">
           <div className="flexElement">
             <label
-              className="basis-1/7 text-xs"
+              className="basis-2/5 text-xs lg:basis-1/7 lg:text-right"
               htmlFor={`education[${index}].univeristy`}
             >
-              University:
+              University:<sup className="text-red-500">*</sup>
             </label>
 
             <Controller
@@ -126,7 +130,6 @@ const AcademicDetails = () => {
                   options={uniOptions}
                   isClearable={true}
                   id={`education[${index}].univeristy`}
-                  // name={`education[${index}].univeristy`}
                   placeholder="Choose a university"
                 />
               )}

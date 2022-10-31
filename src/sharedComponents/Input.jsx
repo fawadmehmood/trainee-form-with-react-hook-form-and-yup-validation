@@ -1,28 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useFormContext } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
 
-const Input = ({ inputType, inputAttr, inputPlaceholder, isRequired }) => {
-  const { register, unregister } = useFormContext();
-
-  // useEffect(() => {
-  //   if (!isRequired) {
-  //     console.log(isRequired);
-  //     unregister(inputAttr);
-  //   }
-  //    else {
-  //     register(inputAttr);
-  //   }
-  // }, [isRequired, unregister]);
+const Input = ({ inputType, name, inputPlaceholder }) => {
+  const { register } = useFormContext();
 
   return (
     <input
       className="input borders"
       type={inputType}
-      name={inputAttr}
-      id={inputAttr}
+      name={name}
+      id={name}
       placeholder={inputPlaceholder}
-      {...register(inputAttr)}
+      {...register(name)}
     />
   );
 };

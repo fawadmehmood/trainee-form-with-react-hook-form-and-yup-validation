@@ -8,7 +8,7 @@ const FormElement = ({
   labelFor,
   labelText,
   inputType,
-  inputAttr,
+  name,
   inputPlaceholder,
   isRequired,
 }) => {
@@ -19,18 +19,21 @@ const FormElement = ({
   return (
     <div className="formElemMy">
       <div className="flexElement">
-        <Label labelFor={labelFor} labelText={labelText} />
+        <Label
+          labelFor={labelFor}
+          labelText={labelText}
+          isRequired={isRequired}
+        />
         <Input
           inputType={inputType}
-          inputAttr={inputAttr}
+          name={name}
           inputPlaceholder={inputPlaceholder}
-          isRequired={isRequired}
         />
       </div>
 
       <ErrorMessage
         errors={errors}
-        name={inputAttr}
+        name={name}
         render={({ message }) => (
           <p className="text-xs text-red-500 text-right italic">{message}</p>
         )}

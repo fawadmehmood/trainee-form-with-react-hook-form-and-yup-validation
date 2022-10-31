@@ -9,6 +9,8 @@ export const schemas = yup.object().shape({
   ttrack2: yup.string().required("Technology Track is required"),
   bCamp2: yup.string().required("Bootcamp is required"),
 
+  graducationCompleted: yup.bool().oneOf([true], "Field must be checked"),
+
   fullName: yup
     .string()
     .max(50, "There should be maximum 50 characters")

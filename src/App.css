@@ -23,7 +23,7 @@ body {
 }
 
 .row {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 lg:flex-row lg:gap-8;
 }
 
 .formElemMy {
@@ -31,13 +31,13 @@ body {
 }
 
 .flexChild {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 lg:flex-1;
 }
 
 /* flex-1  */
 
 .flexElement {
-  @apply flex flex-col gap-2;
+  @apply flex flex-col gap-2 md:flex-row md:gap-4;
 }
 
 .vGap {

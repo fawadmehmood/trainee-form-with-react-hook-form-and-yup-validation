@@ -29,11 +29,11 @@ const JobExperience = () => {
       <fieldset className="borders p-3">
         <legend className="legendText">Job Experience</legend>
         <div className="flexElement mb-4">
-          <p className="text-xs basis-1/7">
+          <p className="text-xs basis-2/5 lg:basis-1/7">
             Have you ever been or are you currently employed?
           </p>
           <div className="flex gap-3">
-            <div className="flex">
+            <div className="flex items-center">
               <input
                 type="radio"
                 name="experience"
@@ -48,7 +48,7 @@ const JobExperience = () => {
               </label>
             </div>
 
-            <div className="flex">
+            <div className="flex items-center">
               <input
                 type="radio"
                 name="experience"
@@ -82,8 +82,9 @@ const JobExperience = () => {
                   labelFor="employerName"
                   labelText="Employer Name"
                   inputType="text"
-                  inputAttr="employerName"
+                  name="employerName"
                   inputPlaceholder="Enter Employer Name"
+                  isRequired={true}
                 />
               </div>
 
@@ -92,11 +93,11 @@ const JobExperience = () => {
                   labelFor="jobStart"
                   labelText="Job Start"
                   inputType="date"
-                  inputAttr="jobStart"
+                  name="jobStart"
+                  isRequired={true}
                 />
               </div>
 
-              {/* <div className="formElemMy"> */}
               <Select
                 key="companies"
                 labelFor="companies"
@@ -106,16 +107,6 @@ const JobExperience = () => {
                 defaultOption="Choose Company"
                 options={companiesOption}
               />
-              {/* <ErrorMessage
-                  errors={errors}
-                  name="companies"
-                  render={({ message }) => (
-                    <p className="text-xs text-red-500 text-right italic">
-                      {message}
-                    </p>
-                  )}
-                /> */}
-              {/* </div> */}
             </div>
             <div className="right flexChild">
               <div className="formElemMy">
@@ -123,8 +114,9 @@ const JobExperience = () => {
                   labelFor="designation"
                   labelText="Designation"
                   inputType="text"
-                  inputAttr="designation"
+                  name="designation"
                   inputPlaceholder="Enter Designation"
+                  isRequired={true}
                 />
               </div>
 
@@ -133,7 +125,8 @@ const JobExperience = () => {
                   labelFor="jobEnd"
                   labelText="Job End"
                   inputType="date"
-                  inputAttr="jobEnd"
+                  name="jobEnd"
+                  isRequired={true}
                 />
               </div>
             </div>

@@ -20,7 +20,7 @@ const Select = ({
   return (
     <div className="formElemMy">
       <div className="flexElement" onChange={handleChange}>
-        <Label labelFor={labelFor} labelText={labelText} />
+        <Label labelFor={labelFor} labelText={labelText} isRequired={true} />
         <select
           name={name}
           id={id}

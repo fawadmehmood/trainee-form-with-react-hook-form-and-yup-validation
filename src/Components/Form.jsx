@@ -6,6 +6,7 @@ import JobExperience from "./JobExperience";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, FormProvider } from "react-hook-form";
 import { schemas } from "../schema";
+import { ErrorMessage } from "@hookform/error-message";
 
 const Form = () => {
   const methods = useForm({
@@ -17,6 +18,12 @@ const Form = () => {
     resolver: yupResolver(schemas),
   });
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = methods;
+
   const submitForm = (data) => {
     // reset();
     console.log(data);
@@ -27,13 +34,13 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-white container mx-auto p-10">
+    <div className="bg-white container mx-auto py-6 px-5 xs:px-10 xs:py-7">
       <header className="text-center">
         <h1 className="text-2xl font-medium">Trainee Application Form</h1>
       </header>
 
       <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit(submitForm, handleErrors)}>
+        <form onSubmit={handleSubmit(submitForm, handleErrors)}>
           <BootCampDetails />
           <div className="vGap">
             <div className="borders py-6 text-center flex align-middle justify-center">
@@ -42,10 +49,21 @@ const Form = () => {
                 name="graducationCompleted"
                 id="graducationCompleted"
                 className="w-4 h-4"
+                {...register("graducationCompleted")}
               />
               <label htmlFor="graducationCompleted" className="text-sm ml-4">
-                I graduated during or after 2017.
+                I graduated during or after 2017.{" "}
+                <sup className="text-red-500">*</sup>
               </label>
+              <ErrorMessage
+                errors={errors}
+                name={"graducationCompleted"}
+                render={({ message }) => (
+                  <p className="text-xs text-red-500 text-right italic">
+                    {message}
+                  </p>
+                )}
+              />
             </div>
           </div>
           <TraineeDetail />
